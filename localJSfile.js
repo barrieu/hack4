@@ -10,17 +10,11 @@ function initialStuff(){
     };
     timeline.push(hello_trial);
 
-    const goodbye_trial = {
-      type: jsPsychHtmlKeyboardResponse,
-      stimulus: 'goodbye world!',
-      choices: "NO_KEYS",
-      trial_duration: 2000
-    };
-    timeline.push(goodbye_trial);
-
     function consoleOutput(){
       var version = jsPsych.version();
       console.log(version);
+      jsPsych.pauseExperiment();
+      setTimeout(jsPsych.resumeExperiment, 5000);
     };
 
     var sayItOut = {
@@ -28,6 +22,14 @@ function initialStuff(){
          func: consoleOutput
      };
      timeline.push(sayItOut);
+
+     const goodbye_trial = {
+       type: jsPsychHtmlKeyboardResponse,
+       stimulus: 'goodbye world!',
+       choices: "NO_KEYS",
+       trial_duration: 2000
+     };
+     timeline.push(goodbye_trial);
 
      return timeline;
 }
