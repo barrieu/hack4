@@ -21,8 +21,8 @@
 
     const jsPsych = initJsPsych();
     var timeline = initialStuff();
-
-    jsPsych.run(timeline);
+    setTimeout(jsPsych.run(timeline), 5000);
+    //jsPsych.run(timeline);
 
   </script>
 </html>
