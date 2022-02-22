@@ -14,14 +14,19 @@
   <body>
     <div id="jspsych_target"></div>
     <audio id="myaudio_twelve_tones" src="twelveTones.mp3" preload="auto"></audio>
-    <button onclick="playTone(1)">1</button>
+    <button onclick="dummyPress">1</button>
   </body>
 
   <script>
 
-    const jsPsych = initJsPsych();
+    function dummyPress(){
+      console.log("dummyPress");
+    };
+
+    //const jsPsych = initJsPsych();
+
     function afterWait(){
-        //const jsPsych = initJsPsych();
+        const jsPsych = initJsPsych();
         var timeline = initialStuff();
         jsPsych.run(timeline);
     };
