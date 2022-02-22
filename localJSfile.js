@@ -10,22 +10,31 @@ function initialStuff(){
     };
     timeline.push(hello_trial);
 
-    function consoleOutput(){
+    function consoleOutput1(){
       var version = jsPsych.version();
-      console.log(version);
+      console.log("version = " + version);
       var time = jsPsych.getTotalTime();
-      console.log(time);
+      console.log("entry = " + time);
       jsPsych.pauseExperiment();
       setTimeout(jsPsych.resumeExperiment, 5000);
-      var time1 = jsPsych.getTotalTime();
-      console.log(time1);
     };
 
-    var sayItOut = {
+    function consoleOutput2(){
+      var time1 = jsPsych.getTotalTime();
+      console.log("exit = " + time1);
+    };
+
+    var sayItOut1 = {
          type: jsPsychCallFunction,
-         func: consoleOutput
+         func: consoleOutput1
      };
-     timeline.push(sayItOut);
+     timeline.push(sayItOut1);
+
+     var sayItOut2 = {
+          type: jsPsychCallFunction,
+          func: consoleOutput2
+      };
+      timeline.push(sayItOut2);
 
      const goodbye_trial = {
        type: jsPsychHtmlKeyboardResponse,
@@ -34,6 +43,17 @@ function initialStuff(){
        trial_duration: 2000
      };
      timeline.push(goodbye_trial);
+
+     function consoleOutput3(){
+       var time2 = jsPsych.getTotalTime();
+       console.log("all done = " + time2);
+     };
+
+     var sayItOut3 = {
+          type: jsPsychCallFunction,
+          func: consoleOutput3
+      };
+      timeline.push(sayItOut3);
 
      return timeline;
 }
