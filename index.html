@@ -18,11 +18,13 @@
   </body>
 
   <script>
-      function afterWait(){
-          const jsPsych = initJsPsych();
-          var timeline = initialStuff();
-          jsPsych.run(timeline);
-      };
+
+    const jsPsych = initJsPsych();
+    function afterWait(){
+        //const jsPsych = initJsPsych();
+        var timeline = initialStuff();
+        jsPsych.run(timeline);
+    };
 
     setTimeout(afterWait(),5000);
 
