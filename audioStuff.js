@@ -37,3 +37,5 @@ function playList1(){
   }, 1500)
 
 }
+
+playTone(1);
