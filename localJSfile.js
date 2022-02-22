@@ -13,8 +13,12 @@ function initialStuff(){
     function consoleOutput(){
       var version = jsPsych.version();
       console.log(version);
+      var time = jsPsych.getTotalTime();
+      console.log(time);
       jsPsych.pauseExperiment();
       setTimeout(jsPsych.resumeExperiment, 5000);
+      var time1 = jsPsych.getTotalTime();
+      console.log(time1);
     };
 
     var sayItOut = {
