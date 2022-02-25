@@ -40,5 +40,3 @@ function playList1(vocalList){
   }, 1500)
 
 }
-
-//playTone(1);
