@@ -3,11 +3,11 @@
 function playTone(selectPart){
   //console.log(JSON.stringify(settings.timeline));
   var version = jsPsych.version();
-  console.log(version);
+  //console.log(version);
   // startT = (selectPart * 0.5) - 0.5;
   // stopT  = startT + 0.4;
   startT = (selectPart * 1) - 1;
-  stopT  = startT + 0.98;
+  stopT  = startT + 0.9;
 
   audio.currentTime=startT;
   audio.play();
