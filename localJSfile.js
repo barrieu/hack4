@@ -19,6 +19,7 @@ function initialStuff(){
       console.log("version = " + version);
       var time = jsPsych.getTotalTime();
       console.log("entry = " + time);
+      playList1([9,2,7,1]);
       jsPsych.pauseExperiment();
       setTimeout(jsPsych.resumeExperiment, 5000);
     };
