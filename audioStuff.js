@@ -19,21 +19,24 @@ function playTone(selectPart){
   }
 
 
-function playList1(){
+function playList1(vocalList){
   console.log("playing First Audio");
+
+  playTone(vocalList[0]);
+
   setTimeout(function(){
-    playTone(1);
-    console.log("played 1");
+    playTone(vocalList[1]);
+    //console.log("played 1");
   }, 500)
 
   setTimeout(function(){
-    playTone(2);
-    console.log("played 2");
+    playTone(vocalList[2]);
+    //console.log("played 2");
   }, 1000)
 
   setTimeout(function(){
-    playTone(3);
-    console.log("played 3");
+    playTone(vocalList[3]);
+    //console.log("played 3");
   }, 1500)
 
 }
