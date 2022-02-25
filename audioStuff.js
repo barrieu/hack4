@@ -21,7 +21,7 @@ function playTone(selectPart){
 function playList1(vocalList){
   console.log("playing Audio List");
   playTone(vocalList[0]);
-  setTimeout(function(){ playTone(vocalList[1]);}, 1000);
-  setTimeout(function(){ playTone(vocalList[2]);}, 2000);
-  setTimeout(function(){ playTone(vocalList[3]);}, 3000);
+  setTimeout(function(){ playTone(vocalList[1]);}, 1100);
+  setTimeout(function(){ playTone(vocalList[2]);}, 2200);
+  setTimeout(function(){ playTone(vocalList[3]);}, 3300);
 }
