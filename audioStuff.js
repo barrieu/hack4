@@ -4,8 +4,10 @@ function playTone(selectPart){
   //console.log(JSON.stringify(settings.timeline));
   var version = jsPsych.version();
   console.log(version);
-  startT = (selectPart * 0.5) - 0.5;
-  stopT  = startT + 0.4;
+  // startT = (selectPart * 0.5) - 0.5;
+  // stopT  = startT + 0.4;
+  startT = (selectPart * 1) - 1;
+  stopT  = startT + 0.98;
 
   audio.currentTime=startT;
   audio.play();
@@ -27,16 +29,16 @@ function playList1(vocalList){
   setTimeout(function(){
     playTone(vocalList[1]);
     //console.log("played 1");
-  }, 500)
+  }, 1000)
 
   setTimeout(function(){
     playTone(vocalList[2]);
     //console.log("played 2");
-  }, 1000)
+  }, 2000)
 
   setTimeout(function(){
     playTone(vocalList[3]);
     //console.log("played 3");
-  }, 1500)
+  }, 3000)
 
 }
