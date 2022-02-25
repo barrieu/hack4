@@ -1,4 +1,4 @@
-var audio= document.getElementById("myaudio_twelve_tones");
+//var audio= document.getElementById("myaudio_twelve_tones");
 
 function playTone(selectPart){
   //console.log(JSON.stringify(settings.timeline));

@@ -1,3 +1,6 @@
+
+const jsPsych = initJsPsych();
+
 function initialStuff(){
 
     var timeline = [];

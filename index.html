@@ -6,6 +6,7 @@
     <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.0"></script>
     <script src="https://unpkg.com/@jspsych/plugin-call-function@1.1.0"></script>
     <link href="https://unpkg.com/jspsych@7.1.2/css/jspsych.css" rel="stylesheet" type="text/css" />
+
     <script type = "text/javascript" src="localJSfile.js"></script>
     <script type = "text/javascript" src="audioStuff.js"></script>
 
@@ -18,12 +19,13 @@
   </body>
 
   <script>
+    var audio= document.getElementById("myaudio_twelve_tones");
 
     function dummyPress(){
       console.log("dummyPress");
     };
 
-    const jsPsych = initJsPsych();
+    //const jsPsych = initJsPsych();
 
     function afterWait(){
         //const jsPsych = initJsPsych();
