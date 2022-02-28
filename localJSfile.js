@@ -15,12 +15,26 @@ function initialStuff(){
     };
     timeline.push(hello_trial);
 
+    // function consoleOutput1(){
+    //   var version = jsPsych.version();
+    //   console.log("version = " + version);
+    //   var time = jsPsych.getTotalTime();
+    //   console.log("entry = " + time);
+    //   playList1([20,30,70,50]);
+    //   jsPsych.pauseExperiment();
+    //   setTimeout(jsPsych.resumeExperiment, 5000);
+    // };
+
     function consoleOutput1(){
       var version = jsPsych.version();
       console.log("version = " + version);
       var time = jsPsych.getTotalTime();
       console.log("entry = " + time);
+
+      tonesToPlay = createToneList();
+      console.log(tonesToPlay);
       playList1([20,30,70,50]);
+            
       jsPsych.pauseExperiment();
       setTimeout(jsPsych.resumeExperiment, 5000);
     };
