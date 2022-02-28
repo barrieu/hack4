@@ -3,10 +3,10 @@
 function playTone(selectPart){
   //var version = jsPsych.version();
   //console.log(version);
-  var startT = (selectPart * 1.0) - 1.0;
-  var stopT  = startT + 0.9;
-  console.log("startT = " + startT);
-  audio.currentTime = parseFloat(startT);
+  startT = (selectPart * 1) - 1;
+  stopT  = startT + 0.9;
+  console.log("startT = " + (parseInt(startT));
+  audio.currentTime = startT;
   audio.play();
 
 // the below setInterval is to check the currentTime
