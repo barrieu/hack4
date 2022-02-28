@@ -5,7 +5,7 @@ function playTone(selectPart){
   //console.log(version);
   startT = (selectPart * 1) - 1;
   stopT  = startT + 0.9;
-  console.log("startT = " + (parseInt(startT)));
+  console.log("startT = " + startT);
   audio.currentTime = startT;
   audio.play();
 
