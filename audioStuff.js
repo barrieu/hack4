@@ -10,9 +10,10 @@ function playTone(selectPart){
   audio.play();
 
 // the below setInterval is to check the currentTime
-  setInterval(function(){
+  var checkInterval = setInterval(function(){
     if(audio.currentTime > stopT){
       audio.pause();
+      clearInterval(checkInterval);
         }
       },10);
   }
