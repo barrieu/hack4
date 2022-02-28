@@ -19,8 +19,8 @@ function playTone(selectPart){
         clearInterval(checkInterval);
           }
         },10);
-    }
   }, 50);
+}
   //console.log(" starting audio at " + audio.currentTime);
 
 // the below setInterval is to check the currentTime
