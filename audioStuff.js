@@ -7,7 +7,8 @@ function playTone(selectPart){
   stopT  = startT + 0.95;
   console.log("startT = " + startT);
   audio.currentTime = startT;
-  audio.play();
+  //audio.play();
+  setTimeout(function(){ audio.play();}, 50);
   console.log(" starting audio at " + audio.currentTime);
 
 // the below setInterval is to check the currentTime
@@ -24,7 +25,7 @@ function playTone(selectPart){
 function playList1(vocalList){
   console.log("playing Audio List");
   playTone(vocalList[0]);
-  setTimeout(function(){ playTone(vocalList[1]);}, 1500);
-  setTimeout(function(){ playTone(vocalList[2]);}, 3000);
-  setTimeout(function(){ playTone(vocalList[3]);}, 4500);
+  setTimeout(function(){ playTone(vocalList[1]);}, 1000);
+  setTimeout(function(){ playTone(vocalList[2]);}, 2000);
+  setTimeout(function(){ playTone(vocalList[3]);}, 3000);
 }
