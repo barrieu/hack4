@@ -8,18 +8,30 @@ function playTone(selectPart){
   console.log("startT = " + startT);
   audio.currentTime = startT;
   //audio.play();
-  setTimeout(function(){ audio.play();}, 50);
-  console.log(" starting audio at " + audio.currentTime);
+  setTimeout(function(){
+    audio.play();
+    console.log(" starting audio at " + audio.currentTime);
+    // the below setInterval is to check the currentTime
+    var checkInterval = setInterval(function(){
+      if(audio.currentTime > stopT){
+        console.log(" stopping audio at " + audio.currentTime);
+        audio.pause();
+        clearInterval(checkInterval);
+          }
+        },10);
+    }
+  }, 50);
+  //console.log(" starting audio at " + audio.currentTime);
 
 // the below setInterval is to check the currentTime
-  var checkInterval = setInterval(function(){
-    if(audio.currentTime > stopT){
-      console.log(" stopping audio at " + audio.currentTime);
-      audio.pause();
-      clearInterval(checkInterval);
-        }
-      },10);
-  }
+  // var checkInterval = setInterval(function(){
+  //   if(audio.currentTime > stopT){
+  //     console.log(" stopping audio at " + audio.currentTime);
+  //     audio.pause();
+  //     clearInterval(checkInterval);
+  //       }
+  //     },10);
+  // }
 
 
 function playList1(vocalList){
