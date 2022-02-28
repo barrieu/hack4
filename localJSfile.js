@@ -32,9 +32,9 @@ function initialStuff(){
       console.log("entry = " + time);
 
       tonesToPlay = createToneList();
-      console.log(tonesToPlay);
+      console.log(tonesToPlay[0] + " " + tonesToPlay[1] + " "  + tonesToPlay[2] + " "  + tonesToPlay[3]);
       playList1([20,30,70,50]);
-            
+
       jsPsych.pauseExperiment();
       setTimeout(jsPsych.resumeExperiment, 5000);
     };
