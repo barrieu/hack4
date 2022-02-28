@@ -1,6 +1,6 @@
 function createToneList(){
   var standard_tone = 1;
-  var init_deviant_tone = 250;
+  var init_deviant_tone = 200;
   var init_decrement = 25;
   var init_increment = 75;
   var later_decrement = 10;
