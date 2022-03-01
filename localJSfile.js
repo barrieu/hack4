@@ -40,7 +40,7 @@ function initialStuff(){
        stimulus: 'press Z or M',
        choices: ['z' , 'm'],
        response_ends_trial: true,
-       on_finish: function(data) {
+       on_finish: function(deviant_location) {
          console.log("after press " + deviant_location);
        }
      };
