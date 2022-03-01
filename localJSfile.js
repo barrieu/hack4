@@ -35,6 +35,14 @@ function initialStuff(){
      };
      timeline.push(playTheTonesTrial);
 
+     const collectUserKey = {
+       type: jsPsychHtmlKeyboardResponse,
+       stimulus: 'press Left or Right',
+       choices: ['z' , 'm'],
+       response_ends_trial: true
+     };
+     timeline.push(collectUserKey);
+
      const goodbye_trial = {
        type: jsPsychHtmlKeyboardResponse,
        stimulus: 'goodbye world!',
