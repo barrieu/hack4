@@ -32,7 +32,7 @@ function initialStuff(){
 
       tonesToPlay = createToneList();
       console.log(tonesToPlay[0] + " " + tonesToPlay[1] + " "  + tonesToPlay[2] + " "  + tonesToPlay[3]);
-      playList1([1,249,1,1]);
+      playList1([1,49,1,1]);
       //playList1([ tonesToPlay[0],tonesToPlay[0],tonesToPlay[0],tonesToPlay[0] ]);
 
       jsPsych.pauseExperiment();
