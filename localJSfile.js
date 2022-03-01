@@ -14,7 +14,7 @@ function initialStuff(){
     };
     timeline.push(hello_trial);
 
-    function playTheTonesFunction(){
+    tonesToPlayOut = function playTheTonesFunction(){
       var version = jsPsych.version();
       console.log("version = " + version);
       var time = jsPsych.getTotalTime();
@@ -27,6 +27,8 @@ function initialStuff(){
 
       jsPsych.pauseExperiment();
       setTimeout(jsPsych.resumeExperiment, 5000);
+
+      return tonesToPlay;
     };
 
     var playTheTonesTrial = {
@@ -40,8 +42,8 @@ function initialStuff(){
        stimulus: 'press Z or M',
        choices: ['z' , 'm'],
        response_ends_trial: true,
-       on_finish: function(deviant_location) {
-         console.log("after press " + deviant_location);
+       on_finish: function(tonesToPlayOut) {
+         console.log("after press " + tonesToPlayOut[1]);
        }
      };
      timeline.push(collectUserKey);
