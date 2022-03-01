@@ -1,6 +1,5 @@
 
 const jsPsych = initJsPsych();
-//var audio= document.getElementById("myaudio_twelve_tones");
 var audio= document.getElementById("myaudio_oneHundred_tones");
 
 function initialStuff(){
