@@ -37,7 +37,7 @@ function playTone(selectPart){
 function playList1(vocalList){
   console.log("playing Audio List");
   playTone(vocalList[0]);
-  var secondTone = setTimeout(function(){ playTone(vocalList[1]);}, 1000);
-  var thirdTone  = setTimeout(function(){ playTone(vocalList[2]);}, 2000);
-  var sourthTone = setTimeout(function(){ playTone(vocalList[3]);}, 3000);
+  var secondTone = setTimeout(function(){ playTone(vocalList[1]);}, 1100);
+  var thirdTone  = setTimeout(function(){ playTone(vocalList[2]);}, 2200);
+  var sourthTone = setTimeout(function(){ playTone(vocalList[3]);}, 3300);
 }
