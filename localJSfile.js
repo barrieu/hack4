@@ -37,9 +37,12 @@ function initialStuff(){
 
      const collectUserKey = {
        type: jsPsychHtmlKeyboardResponse,
-       stimulus: 'press Left or Right',
+       stimulus: 'press Z or M',
        choices: ['z' , 'm'],
-       response_ends_trial: true
+       response_ends_trial: true,
+       on_finish: function(data) {
+         console.log("after press " + deviant_location);
+       }
      };
      timeline.push(collectUserKey);
 
