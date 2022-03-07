@@ -1,3 +1,6 @@
+// ************************************************************
+// THIS IS THE PRIMARY JS FILE
+// ************************************************************
 
 const jsPsych = initJsPsych();
 var audio= document.getElementById("myaudio_oneHundred_tones");
@@ -149,7 +152,7 @@ function initialStuff(){
       }
       console.log(" DIRECTION STUFF " + reversal_count + "  " + previous_direction + "  " + latest_direction);
       console.log("    ");
-      
+
       previous_direction = latest_direction;
     };
 
