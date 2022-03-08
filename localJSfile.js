@@ -1,3 +1,6 @@
+// ************************************************************
+// THIS IS THE PRIMARY JS FILE
+// ************************************************************
 
 const jsPsych = initJsPsych();
 var audio= document.getElementById("myaudio_oneHundred_tones");

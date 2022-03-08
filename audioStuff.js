@@ -4,7 +4,7 @@ function playTone(selectPart){
   //var version = jsPsych.version();
   //console.log(version);
   startT = (selectPart * 1) - 1;
-  stopT  = startT + 0.95;
+  stopT  = startT + 1;
   //console.log("startT = " + startT);
   audio.currentTime = startT;
   //audio.play();
