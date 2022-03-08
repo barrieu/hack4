@@ -37,40 +37,44 @@ function initialStuff(){
     timeline.push(hello_trial);
 
 // ******** REPEAT THIS UNTIL Q PRESSED *******************
-    const star_trial_1 = {
-      type: jsPsychHtmlKeyboardResponse,
-      stimulus: '***** 1 ******',
-      choices: "NO_KEYS",
-      trial_duration: 2000
-    };
+// This just demonstrates how to end a nested loopTimeline
+// *********************************************************
+// COMMENT OUT FOR CONVINIENCE
 
-    const star_trial_2 = {
-      type: jsPsychHtmlKeyboardResponse,
-      stimulus: 'press Q to quit loop or E to continue',
-      choices: ['q','w'],
-      response_ends_trial: true,
-      //trial_duration: 1000,
-    };
-
-    function endTheLoopFunc() {
-      var lastKeypressStringify = JSON.stringify(jsPsych.data.getLastTrialData());
-      var userPressedKey = lastKeypressStringify.substring(lastKeypressStringify.indexOf('"response":') + 11).substring(1,2);
-      console.log('userPressedKey = ' + userPressedKey  + '    ' + lastKeypressStringify);
-      if (userPressedKey === 'q'){
-        jsPsych.endCurrentTimeline();
-      }
-    };
-
-    var endTheLoop = {
-      type: jsPsychCallFunction,
-      func: endTheLoopFunc
-    };
-
-    var loop_node_1 = {
-      timeline: [star_trial_1, star_trial_2, endTheLoop],
-      repetitions: 60
-    };
-    timeline.push(loop_node_1);
+    // const star_trial_1 = {
+    //   type: jsPsychHtmlKeyboardResponse,
+    //   stimulus: '***** 1 ******',
+    //   choices: "NO_KEYS",
+    //   trial_duration: 2000
+    // };
+    //
+    // const star_trial_2 = {
+    //   type: jsPsychHtmlKeyboardResponse,
+    //   stimulus: 'press Q to quit loop or E to continue',
+    //   choices: ['q','e'],
+    //   response_ends_trial: true,
+    //   //trial_duration: 1000,
+    // };
+    //
+    // function endTheLoopFunc() {
+    //   var lastKeypressStringify = JSON.stringify(jsPsych.data.getLastTrialData());
+    //   var userPressedKey = lastKeypressStringify.substring(lastKeypressStringify.indexOf('"response":') + 11).substring(1,2);
+    //   console.log('userPressedKey = ' + userPressedKey  + '    ' + lastKeypressStringify);
+    //   if (userPressedKey === 'q'){
+    //     jsPsych.endCurrentTimeline();
+    //   }
+    // };
+    //
+    // var endTheLoop = {
+    //   type: jsPsychCallFunction,
+    //   func: endTheLoopFunc
+    // };
+    //
+    // var loop_node_1 = {
+    //   timeline: [star_trial_1, star_trial_2, endTheLoop],
+    //   repetitions: 60
+    // };
+    // timeline.push(loop_node_1);
 // ************************************************
 
 
@@ -149,7 +153,7 @@ function initialStuff(){
       }
       console.log(" DIRECTION STUFF " + reversal_count + "  " + previous_direction + "  " + latest_direction);
       console.log("    ");
-      
+
       previous_direction = latest_direction;
     };
 
